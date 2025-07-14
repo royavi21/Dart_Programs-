@@ -1,5 +1,5 @@
 void main() {
-  /*
+
   print("Hello Dart!");
   /* 1
   2
@@ -74,8 +74,132 @@ void main() {
   final gravity = 9.81; //Final value (can only be set once)
   print("Value of pi: $pi");
   print("Value of gravity: $gravity");
- */
-//LIST PROPERTIES     
+
+  //LIST PROPERTIES []
+  var eity = ['Dhaka', 'Khulna', 'Rajshahi', 'Chittagong', 'Sylhet'];
+  var result = eity.length;
+  print(result);
+
+  //Growable list । এখানে const ব্যাবহার করা হয় নি যার জন্য এটি পরিবর্তন করা যাবে।
+  //List এর এলিমেন্ট গুলো একই টাইপের হতে হবে না। মানে ভিন্য ভিন্ন টাইপের ডাটা থাকতে পারে।
+  var ccity = ['Dhaka', 'Khulna', 'Rajshahi', 'Chittagong', 'Sylhet'];
+  print(ccity);
+  ccity.add("Cox's Bazar"); //Adding an element to the list
+  print(ccity);
+  ccity.remove("Khulna"); //Removing an element from the list
+  print(ccity);
+  ccity.insert(0, "Barisal"); //Inserting an element at a specific index
+  print(ccity);
+
+  //Fixed length list ।। constantব্যাবহারের জন্য এটি আর পরিবর্তন করা যাবে না।
+  const fixedCity = ['Dhaka', 'Khulna', 'Rajshahi', '২৩', 'Sylhet'];
+  print(fixedCity);
+  // fixedCity.add("Cox's Bazar"); //This will throw an error because fixedCity is a constant list and cannot be modified.
+  // print(fixedCity);
+
+
+  //List Insertion []
+  //add() --> Adds an element to the end of the list. । লিস্টের শেষে একটি এলিমেন্ট যোগ করে।
+  //addAll() --> Adds multiple elements to the end of the list. | লিস্টের শেষে একাধিক এলিমেন্ট যোগ করে।
+  //insert() --> Inserts an element at a specific index. | নির্দৃষ্ট ইনডেক্সে একটি এলিমেন্ট যোগ করে।
+  //insertAll() --> Inserts multiple elements at a specific index. | নির্দৃষ্ট ইনডেক্সে একাধিক এলিমেন্ট যোগ করে।
+  //remove() --> Removes the first occurrence of an element from the list. | লিস্ট থেকে প্রথম এলিমেন্ট মুছে ফেলে।
+  //removeAt() --> Removes an element at a specific index. | নির্দৃষ্ট ইনডেক্স থেকে একটি এলিমেন্ট মুছে ফেলে।
+  //removeLast() --> Removes the last element from the list. | লিস্টের শেষ এলিমেন্ট মুছে ফেলে।
+  //clear() --> Removes all elements from the list. | লিস্ট থেকে সব এলিমেন্ট মুছে ফেলে।
+
+  var numbers = [1, 2, 3, 4, 5];
+  print("Original List: $numbers");
+
+  numbers.add(6); //Adding an element to the end
+  print("After adding 6: $numbers");
+
+  numbers.addAll([7, 8, 9]); //Adding multiple elements
+  print("After adding 7, 8, 9: $numbers");
+
+  numbers.insert(0, 120); //Inserting at index 0 (index, value)
+  print("After inserting 0 at index 0: $numbers");
+
+  numbers.remove(3); //Removing first occurrence of 3
+  print("After removing first occurrence of 3: $numbers");
+
+  numbers.removeAt(2); //Removing element at index 2
+  print("After removing element at index 2: $numbers");
+
+  numbers.clear();
+  print("After clearing the list: $numbers"); //Clearing the list
+
+
+
+  //List Update & Deletion [] 
+  //List Update means changing the value of an existing element in the list.
+  //We can update an element in a list by accessing it using its index and assigning a new value to it.
+  var num = [1, 2, 3, 4, 5, 8, 9, 7];
+  num[1] = 10; //Updating the second element (index 1) to 10
+  print(num); // Output: [1, 10, 3, 4, 5]
+  num.removeLast(); //Removing the last element
+  print(num);
+  num.removeAt(2); //Removing the element at index 2
+  print(num); // Output: [1, 10, 4, 5]
+  num.insert(2, 6); //Inserting 6 at index 2
+  print(num); // Output: [1, 10, 6, 4, 5]
+
+num.remove(10); //Removing the first occurrence of 10
+  print(num); // Output: [1, 6, 4, 5, 8, 9] (10 is not in the list anymore)
+
+
+  //DART SET {}
+  //Set হল একটি অর্ডারহীন কালেকশন যা ইউনিক ভ্যালু ধারণ করে। সেটে ডুপ্লিকেট ভ্যালু রাখা যায় না। এর ইন্ডেক্স নেই। সেটের এলিমেন্ট গুলো একই টাইপের হতে হবে না।
+  var uniqueNumbers = <int>{1, 2, 3, 4, 5}; //Set with unique values
+  print(uniqueNumbers); //Print the entire set
+
+  print(
+    uniqueNumbers.elementAtOrNull(3),
+  ); //Accessing an element by index (returns null if index is out of range)
+
+  uniqueNumbers.add(6); //Adding an element to the set
+  print(uniqueNumbers);
+
+  uniqueNumbers.remove(3); //Removing an element from the set
+  print(uniqueNumbers);
+
+  print(
+    "Does the set contain 2? ${uniqueNumbers.contains(2)}",
+  ); //Check if the set contains a value
+
+  var anotherSet = {4, 5, 6, 7}; //Another set
+  var unionSet = uniqueNumbers.union(anotherSet); //Union of two sets
+  print("Union of sets: $unionSet");
+
+  var intersectionSet = uniqueNumbers.intersection(
+    anotherSet,
+  ); //Intersection of two sets
+  print("Intersection of sets: $intersectionSet");
+
+
+  //Map
+  var person = {'Name': 'Avijit Roy', 'Age': 22, 'City': 'Gopalganj'};
+  person['Country'] = 'Bangladesh'; //Adding a new key-value pair
+  person['Occupation'] = 'Student'; //Adding another key-value pair
+
+  print(person);
+
+  //using map constructor  || ম্যাপ কনস্ট্রাক্টর ব্যবহার করে ম্যাপ তৈরি করা। 
+  var per = new Map();
+  per['Name'] = 'Avijit Roy';
+  per['Age'] = 21;
+  per['City'] = 'Gopalganj';
+  per['Country'] = 'Bangladesh';
+  per['Occupation'] = 'Student';
+  print(per); //Print the entire map
+  print(per.keys); //Print all keys in the map
+  print(per.values); //Print all values in the map
+  print(per.length); //Print the length of the map
+  print(per.isEmpty); //Check if the map is empty
+  print(per.isNotEmpty); //Check if the map is not empty
+  print(per.containsKey('Name')); //Check if the map contains a specific key
+  print(per.containsValue('Avijit Roy')); //Check if the map contains a specific
+
 
 
 }
