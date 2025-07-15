@@ -1,5 +1,7 @@
-void main() {
+import 'dart:io';
 
+void main() {
+  /*
   print("Hello Dart!");
   /* 1
   2
@@ -200,6 +202,143 @@ num.remove(10); //Removing the first occurrence of 10
   print(per.containsKey('Name')); //Check if the map contains a specific key
   print(per.containsValue('Avijit Roy')); //Check if the map contains a specific
 
+  //ম্যাপ কন্সট্রাক্টর ব্যবহার না করে ম্যাপ তৈরি করা।
+  var personMap = {
+    'Name': 'Avijit Roy',
+    'Age': 22,
+    'City': 'Gopalganj',
+    'Occupation': 'Student',
+  };
+  personMap.addAll({
+    'Cpuntry': 'Bangladesh',
+    'Hobby': 'Coding',
+  }); //Adding multiple key-value pairs
+  print(personMap); //Print the entire map
+
+  // remove মেথড ব্যবহার করে একটি key-value পেয়ার মুছে ফেলা হচ্ছে।
+  personMap.remove('Occupation'); //Removing a key-value pair
+  print(personMap); //Print the map after removal
+
+  personMap.clear();
+  print(personMap); //Clearing the map
 
 
+
+  //DART control flow statements    ডিসিসন মেকিং স্টেটমেন্টস । লুপিং স্টেটমেন্টস
+
+  var marks = 66;
+  if (marks >= 80) {
+    print("You got A+");
+  } else if (marks >= 70 && marks < 80) {
+    print('You got A');
+  } else if (marks >= 60 && marks < 70) {
+    print('You got A-');
+  } else if (marks >= 50 && marks < 60) {
+    print('You got B');
+  } else if (marks >= 40 && marks < 50) {
+    print('You got C');
+  } else if (marks >= 33 && marks < 40) {
+    print('You got D');
+  } else {
+    print('You failed NIGGA ☠️');
+  }
+
+
+  //SWITCH statement
+  print("1>Friday | 2> Saturday |3>Sunday  |4>Monday   5>Tuesday");
+  var day = 11; //This returns "Default" case.
+
+  switch (day) {
+    case 1:
+      print("Friday");
+      break;
+    case 2:
+      print("Saturday");
+      break;
+    case 3:
+      print("Sunday");
+      break;
+    case 4:
+      print("Monday");
+      break;
+    case 5:
+      print("Tuesday");
+      break;
+    default:
+      print("No day selected");
+  }
+
+
+
+  // DART Looping Statements
+
+  for (var i = 0; i <= 10; i = i + 2) {       //For Loop  এক লাইনে ৩ টা কন্ডিশন। 
+                                              // তাই এটি এন্ট্রি কন্ট্রোল লুপ। 
+    print("Dart" + i.toString());
+  }
+
+  var mylist1 = [
+    10,
+    20,
+    30,
+    40,
+    50,
+  ]; //লিস্ট বা অ্যারে নিয়ে কাজ করলে for in ব্যবহার করা যায়।
+  for (var MylistItem in mylist1) {
+    print(MylistItem);
+  }
+
+  //For set     সেট এও (লিস্ট ও অ্যারে) এর মতই for - in ব্যবহার করা হয়। 
+
+
+  var AlphabateList = {'A', 'B', 'C', 'D'}; 
+  for (var EachItem in AlphabateList) {
+    print(EachItem);  //Print each item in the set
+  }
+
+
+  var produuctlist = [
+    {'name': 'Laptop', 'price': 1000}, //Each are a map
+    {'name': 'Mobile', 'price': 500}, //Each are a map
+    {'name': 'Tablet', 'price': 300},
+    {'name': 'Light pen', 'price': 54}, //Each are a map
+  ]; //এই টাইপের ডেটা কে জেসন ডেটা বলে।
+
+  for (var OneProdect in produuctlist) {
+    var item =
+        "Product name is = ${OneProdect['name']} and price is = ${OneProdect['price']} taka.";
+
+    print(item);
+
+    print("---------------------------------------------------"); //Separator for better readability
+  }
+
+     
+
+  //While and Do-while loop
+
+  var i = 0;
+  while (i <= 10) {   //While Loop  ৩ টা আলাদা লাইনে ৩ টা আলদা কন্ডিশন হয়। 
+                      // প্রথমে declaration, পরে while এর condition এরপর print এবং একেবারে শেষে increment/decrement. 
+    print(i);
+    i = i + 1;
+  }                                       // While ও Do-while এটি এক্সিট কন্ট্রোল লুপ।
+  print("--------------");
+  var j = 0;
+  do {              //Do while Loop   এতে প্রথমে declaration তারপর do > Print তারপর inc/dec এবং একেবারে শেষে while এর condition. 
+      print(j);
+    j++;
+  } while (j <= 5);
+  print("--------------");
+  var r = 0;
+  do {
+    print(r);
+    r++;
+  } while (r <= 4);
+
+  */
+  // এক গুচ্ছ কোডকে বলা হয় ফাংশন। 
+            //FUNCTION
+
+  
 }

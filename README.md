@@ -7,4 +7,4 @@ Youtube Tutorial link: https://youtu.be/_8Q5cwfvi64?si=aBHBDtPONTJ9TDjV
 
 2nd day: >1:59:11   | July 14 - 2025    | 1:33 PM
 
-3rd day:
+3rd day: >2:52:41   | July 15 - 2025    | 11:22 PM
